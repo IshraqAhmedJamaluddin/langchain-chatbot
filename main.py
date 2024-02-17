@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-chat = ChatOpenAI()
+chat = ChatOpenAI(verbose=True)
 memory = ConversationSummaryMemory(
     memory_key="messages",
     return_messages=True,
@@ -26,7 +26,7 @@ prompt = ChatPromptTemplate(
     ],
 )
 
-chain = LLMChain(llm=chat, prompt=prompt, memory=memory)
+chain = LLMChain(llm=chat, prompt=prompt, memory=memory, verbose=True)
 
 while True:
     content = input(">> ")
