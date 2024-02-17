@@ -5,7 +5,7 @@ from langchain.prompts import (
     MessagesPlaceholder,
 )
 from langchain.chains import LLMChain
-from langchain.memory import ConversationBufferWindowMemory
+from langchain.memory import ConversationBufferWindowMemory, FileChatMessageHistory
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -15,6 +15,7 @@ memory = ConversationBufferWindowMemory(
     k=3,  # keeps track of the past three interactions
     memory_key="messages",
     return_messages=True,
+    chat_memory=FileChatMessageHistory("messages.json"),
 )
 
 prompt = ChatPromptTemplate(
