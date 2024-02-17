@@ -14,6 +14,10 @@ add a `.env` file to your base directory that includes your `OPENAI_API_KEY` e.g
 OPENAI_API_KEY=[YOUR KEY HERE]
 ```
 
+to make an environment use `python -m venv env`, then if you're on mac or linux use `source env/bin/activate` or on windows use the command corresponding to your terminal type.
+
+to install required packages run `pip install -r requirements.txt`
+
 to run just type `python main.py` this uses summary memory which is slow
 
 to run the sliding window buffer version which is faster but only keeps track of the past 3 interactions type `python _using_buffer_window.py`
