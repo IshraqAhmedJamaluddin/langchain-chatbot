@@ -2,7 +2,7 @@
 
 A small project using langChain
 
-It takes maintains a conversation with the user using the terminal.
+It takes maintains a conversation with the user using the terminal, and maintains history of the conversation.
 ![List of Messages start with a System Message, then a sequence of User, Assistant Messages exchanged](architecture.png)
 ![Terminology mapping from OpenAI roles to LangChain roles](terminologyMapping.png)
 
